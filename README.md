@@ -12,8 +12,8 @@ Project is created with:
 ## Setup
 To run this project:
 
-'''
+```
 $ cd ../TicTacToe
 $ javac TicTacToe.java
 $ java TicTacToe
-'''
+```
