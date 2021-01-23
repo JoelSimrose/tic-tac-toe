@@ -10,3 +10,8 @@ Project is created with:
 * Java SE Version: 10
 
 ## Setup
+To run this project:
+
+$ cd ../TicTacToe
+$ javac TicTacToe.java
+$ java TicTacToe
