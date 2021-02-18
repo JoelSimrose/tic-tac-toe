@@ -34,7 +34,6 @@ public class GUIHumanPlayer extends Player
 		{
 			
 			try{
-				System.out.println("In Thread sleep");
 				Thread.sleep(100);
 			}
 				

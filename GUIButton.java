@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -32,11 +31,34 @@ public class GUIButton extends JButton
 
 	public void rotateX()
 	{
-		rotate1 = rotate1 + incX;
-		if(rotate1 >= 360) rotate1 = 0;
-		
-		rotate2 = rotate2 + incX;
-		if(rotate2 >= 360) rotate2 = 0;
+		scale1 = scale1 + incO;
+
+		if(scale1 > 120) 
+		{
+			scale1 = 120;
+			incO = -5;
+		}
+
+		if(scale1 < 20)
+		{
+			scale1 = 20;
+			incO = 5;
+
+		} 
+
+		scale2 = scale2 + incO;
+
+		if(scale2 > 150)
+		{
+			scale2 = 150;
+			incO = -5;
+		} 
+
+		if(scale2 < 50)
+		{
+			scale2 = 50;
+			incO = 5;
+		}
 	}
 
 	public void scaleO()
@@ -77,7 +99,6 @@ public class GUIButton extends JButton
 	{
 		
 		super.paint(g);
-		//g.drawLine(0,0,getWidth(),getHeight());
 		
 		Graphics2D gr = (Graphics2D) g;
 
@@ -101,8 +122,7 @@ public class GUIButton extends JButton
 		
 				gr.setTransform(old);
 				
-				//Second Rect
-				
+				//Second Rectangle
 				gr.translate((width * 165) / 200, height/3 - height/30);
 				gr.rotate(Math.toRadians(rotate2));
 			
@@ -117,19 +137,17 @@ public class GUIButton extends JButton
 				Color myColor = this.getBackground();
 				gr.setColor(myColor);
 				gr.fillOval(width/2-(scale1/2), height/2-(scale1/2), scale1, scale1);
-				//gr.scale(scale1, scale2);
 			}
 			
 		}
 
 		catch(Exception e)
 		{
-			System.out.println("There was an exception: " + e);
+			//System.out.println("There was an exception " );
 		}
 		
 	}
 	
-
 	public void setCharacter(Character turn)
 	{
 		this.turn = turn;

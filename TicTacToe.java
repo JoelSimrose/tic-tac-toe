@@ -49,7 +49,6 @@ public class TicTacToe
 
 			while(!board.makeMove(newMove.getRow(), newMove.getColumn(),turn))
 			{
-				System.out.println("In While");
 				newMove = turn.getMove(board);	
 			}
 

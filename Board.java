@@ -90,7 +90,6 @@ public class Board
 	Player win()
 	{
 
-
 		Player checkWin = null;
 
 		try{
@@ -117,7 +116,6 @@ public class Board
 
 						else if(j == (columns-1) && checkWin != null)
 						{
-							System.out.println("In 1");
 							return checkWin;
 						}
 
@@ -148,7 +146,6 @@ public class Board
 
 						else if(b == (rows-1) && checkWin != null)
 						{	
-							System.out.println("In 2");
 							return checkWin;
 						}
 
@@ -156,8 +153,7 @@ public class Board
 				}
 			}	
 
-
-
+			
 			if(rows == columns)	//Check for positive diagonal win
 			{
 
@@ -184,7 +180,6 @@ public class Board
 
 						else if(j == 0 && i == (rows-1) && checkWin != null)
 						{	
-							System.out.println("In 3");
 							return checkWin;
 						}
 
@@ -228,6 +223,7 @@ public class Board
 		{
 			System.out.println("There has been an exception: " + e);
 		}
+
 		return null;
 
 	}
@@ -273,8 +269,6 @@ public class Board
 	boolean makeMove(int row, int column, Player player)
 	{
 	
-
-
 		if(getPlayerAtLocation(row, column) != null)
 		{
 			return false;
@@ -286,7 +280,6 @@ public class Board
 		
 			return true;
 		}
-		
 	
 	}
 

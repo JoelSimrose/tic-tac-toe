@@ -14,7 +14,6 @@ public class PaintX extends JButton
 
 	public void paintComponent(Graphics g)
 	{
-		System.out.println("In paint");
 		g.drawLine(50, 50, 150,150);
 		g.drawLine(50,150,150,50);
 

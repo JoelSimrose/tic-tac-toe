@@ -1,6 +1,4 @@
 //Joel Simrose
-//CMPT 305
-//Assignment5 GUIBoard
 //November 8, 2018
 
 import java.awt.*;
@@ -67,7 +65,6 @@ public class GUIBoard implements ActionListener
 
 		frame.pack();
 		frame.setVisible(true);
-
 	}
 
 	/**
@@ -195,18 +192,13 @@ public class GUIBoard implements ActionListener
 			{
 				if(e.getSource() == buttons[i][j])
 				{	
-					System.out.println("In Action Performed");
-
-					lastClicked = new Move(i, j);
-		
+					lastClicked = new Move(i, j);	
 				}
 			}
 			
 		}
 	}
 		
-	
-	
 	public void resetClicked()
 	{
 		lastClicked = null;
