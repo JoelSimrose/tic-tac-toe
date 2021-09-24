@@ -1,4 +1,4 @@
-# Shaker Sort
+# Tic Tac Toe
 
 ## Table of contents
 
